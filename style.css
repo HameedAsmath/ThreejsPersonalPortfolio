@@ -1,0 +1,174 @@
+@import url("https://use.typekit.net/jmk3xov.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@300;400;500;900&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&family=Roboto:wght@700&family=Tourney:wght@300;900&display=swap");
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+:root {
+  --dark-bg: rgba(21, 75, 161, 0.75);
+  --spacing: 350px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Roboto';
+}
+
+
+main {
+  width: 100vw;
+  color: white;
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  margin: 0px auto;
+  padding: 120px 0px;
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+h1, h2, h3, blockquote {
+  font-weight: 400;
+  font-family: 'Roboto';
+  font-style: normal;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+  header {
+    background: var(--dark-bg);
+    grid-column: 2 / span 5;
+    font-size: 2.6rem;
+    padding: 2rem;
+    margin-bottom: var(--spacing);
+  }
+
+  section {
+    grid-column: 2 / 8;
+    padding: 1rem;
+    background: var(--dark-bg);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote {
+    margin: 0;
+    padding: 5px;
+    grid-column: 2 / span 9;
+    margin-bottom: var(--spacing);
+  }
+
+  blockquote p {
+    color: rgb(73, 125, 204) ;
+    /* rgba(53, 137, 196,0.90) */
+    background-color:  rgb(253, 253, 253) ;
+    opacity: 0.8;
+    font-size: 3.6rem;
+    display: inline;
+    font-family: 'Tourney';
+    line-height: 1;
+  }
+
+  .left {
+    grid-column: 6 / 12;
+  }
+  h1{
+    font-family: 'Tourney';
+    font-weight: 300;
+    font-size: 3.4rem;
+  }
+  .mr{
+    margin-right: 20px;
+  }
+  /*Card Animation */
+
+.single-team{
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.team-img{
+  position: relative;
+}
+.team-img:before{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 11;
+  transform: translateX(-100%);
+  transition: all 0.4s ease;
+  visibility: hidden;
+  content: '';
+  background: rgba(126, 126, 142, 0.9);
+  height: 100%;
+  width: 100%;
+}
+.single-team:hover .team-img::before{
+  visibility: visible;
+  transform: translateY(0%);
+}
+.team-img img{
+  width: 100%;
+  z-index: 10;
+  transition: 0.9s;
+}
+.single-team:hover img{
+  transform: scale(1.1);
+}
+.overlay-text{
+  position: absolute;
+  z-index: 15;
+  color: #fff;
+  /* top: 30%; */
+  text-align: center;
+  /* padding-left: 50%; */
+  /* padding-right: 50%; */
+  top: 55%;
+  right: 50%;
+  transform: translate(50%,-50%);
+  opacity: 0;
+  transition: all 0.4s ease;
+  /* font-family: ; */
+}
+.single-team:hover .overlay-text{
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay-text h2{
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 1s ease;
+  font-size: 25px;
+  margin: 0px 0px 5px;
+  position: relative;
+  top: -22px;
+}
+.single-team:hover h2{
+  top: 0px;
+}
+.overlay-text p{
+  position: relative;
+  bottom: -2px;
+  transition: all 1s ease;
+}
+.single-team:hover p{
+  bottom: 2px;
+}
+.job-role{
+  font-size: 20px !important;
+  margin-bottom: 15px !important;
+  font-weight: bolder;
+}
