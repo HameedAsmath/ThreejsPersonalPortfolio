@@ -38,13 +38,6 @@ h1, h2, h3, blockquote {
   font-style: normal;
 }
 
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-
 
   header {
     background: var(--dark-bg);
@@ -171,4 +164,37 @@ canvas {
   font-size: 20px !important;
   margin-bottom: 15px !important;
   font-weight: bolder;
+}
+/* .btn-margin{
+  margin: 15px !important;
+} */
+.btn-margin .px-5{
+  margin: 10px;
+}
+
+/* media queries */
+@media only screen and (max-width: 750px) {
+  h1, h2, h3, blockquote {
+    text-align: center;
+  }
+  blockquote{
+    grid-column: 2/ span 11;
+  }
+  header{
+    grid-column: 2/ span 11;
+    display: flex;
+    flex-direction: column;
+  }
+  section{
+    grid-column: 2/span 11;
+  }
+  .left {
+    grid-column: 2/span 11;
+  }
+  /* .btn-margin{
+    margin: 0px !important;
+  } */
+  /* .btn-margin .btn{
+    margin-top: 10px ;
+  } */
 }
